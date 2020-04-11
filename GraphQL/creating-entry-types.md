@@ -15,7 +15,7 @@ type Query {
 }
 ~~~
 
-O problema é que se nossa entrada for composta de vários parâmetros, fica extremamente massante e estéticamente feio, ter que escrever tudo isso. Porém, é possível criar um tipo de entrada que já é composto por todos os atributos necessários para a query. Podemos também reutilizá-las, diminuindo ainda mais a quantidade de coisas repetidas que o dev teria que escrever:
+O problema é que se nossa entrada for composta de vários parâmetros, fica extremamente maçante e estéticamente feio, ter que escrever tudo isso. Porém, é possível criar um tipo de entrada que já é composto por todos os atributos necessários para a query. Podemos também reutilizá-las, diminuindo ainda mais a quantidade de coisas repetidas que o dev teria que escrever:
 
 ~~~graphql
 input SearchUserInput {
