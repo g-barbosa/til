@@ -2,7 +2,7 @@
 
 ### É possível criar tipos pré-definidos de entradas para usar em suas querys ou mutations no GraphQL
 
-Geralmente, quando criamos uma query ou mutation que precisam receber parâmetros de entrada, nós escrevemos cada uma das variáveis e os tipos que esperamos receber:
+Geralmente, quando criamos uma query ou mutation que precisa receber parâmetros de entrada, nós escrevemos cada uma das variáveis e os tipos que esperamos receber:
 
 ~~~graphql
 type User {
@@ -15,7 +15,7 @@ type Query {
 }
 ~~~
 
-O problema é que se nossa entrada ser composta de vários parâmetros, fica extremamente massante e estéticamente feio, ter que escrever tudo isso. Porém, é possível criar um tipo de entrada que já é composto por todos os atributos necessários para a query. Podemos também reutiliza-las, diminuindo mais ainda a quantidade de coisas repetidas que o dev iria escrever:
+O problema é que se nossa entrada for composta de vários parâmetros, fica extremamente massante e estéticamente feio, ter que escrever tudo isso. Porém, é possível criar um tipo de entrada que já é composto por todos os atributos necessários para a query. Podemos também reutilizá-las, diminuindo ainda mais a quantidade de coisas repetidas que o dev teria que escrever:
 
 ~~~graphql
 input SearchUserInput {
