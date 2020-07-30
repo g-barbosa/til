@@ -1,0 +1,3 @@
+# Docker: um resumo muito resumido
+o Docker é uma ferramenta incrível que resolve a famosa problemática do "Na minha máquina funciona", permitindo que você junte todas as dependências da sua aplicação e a sua aplicação em si em um "container" e suba em um repositório. Igual o que fazemos com os nossos códigos aqui no github.
+Desta forma, não corremos o risco de na sua maquina ter uma versão de dependência instalada e na do seu colega de trabalho outra podendo assim, gerar problemas chatos no desenvolvimento.
