@@ -2,7 +2,7 @@
 
 > Uma classe deve ter apenas uma razão para mudar.
 
-Cada classe de ter uma única responsabilidade dentro do projeto.
+Cada classe deve ter uma única responsabilidade dentro do projeto.
 
 ### Exemplo:
 
