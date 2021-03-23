@@ -12,3 +12,4 @@ Temos uma classe **Pet** com o método **adicionarPet** e dentro deste metódo n
 
 **Solução:**
 
+Criamos a interface **IPetRepositorio** e fazemos com que nossa classe **PetRepositorio** implementa-a. Dentro da classe **Pet**, nós injetamos nossa classe **PetRepositorio** representada pela sua interface **IPetRepositorio**. Assim a **Pet** não é obrigada a saber como criar uma instância de **PetRepositorio** e quem for consumir esta classe deve passar as instâncias já criadas no construtor dela. Desta forma, invertemos o controle.
