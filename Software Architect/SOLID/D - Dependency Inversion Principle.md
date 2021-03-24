@@ -8,7 +8,7 @@ Dependa de uma abstração e não de uma implementação.
 
 **Problema:**
 
-Temos uma classe **Pet** com o método **adicionarPet** e dentro deste metódo nós criamos uma nova instância de uma classe **PetRepositorio** para poder usar seu método de SalvarPet. O problema é que toda vez que nosso **PetRepositorio** for alterado, precisamos mudar a nossa clase **Pet**. Nossa classe não deveria precisar saber como se instancia este repository ou que tipo de parâmetros ele deveria receber. Devido a isso, estamos quebrando o princípio da inversão de dependência.
+Temos uma classe **Pet** com o método **adicionarPet** e dentro deste metódo nós criamos uma nova instância de uma classe **PetRepositorio** para poder usar seu método de SalvarPet. O problema é que toda vez que nosso **PetRepositorio** for alterado, precisamos mudar a nossa classe **Pet**. Nossa classe não deveria precisar saber como se instancia este repository ou que tipo de parâmetros ele deveria receber. Devido a isso, estamos quebrando o princípio da inversão de dependência.
 
 **Solução:**
 
