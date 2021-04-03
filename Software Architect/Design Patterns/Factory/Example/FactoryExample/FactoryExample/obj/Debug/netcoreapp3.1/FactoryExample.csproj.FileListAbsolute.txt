@@ -1,0 +1,13 @@
+C:\Users\acer\Desktop\Projetos de estudo\til\Software Architect\Design Patterns\Factory\Example\FactoryExample\FactoryExample\bin\Debug\netcoreapp3.1\FactoryExample.exe
+C:\Users\acer\Desktop\Projetos de estudo\til\Software Architect\Design Patterns\Factory\Example\FactoryExample\FactoryExample\bin\Debug\netcoreapp3.1\FactoryExample.deps.json
+C:\Users\acer\Desktop\Projetos de estudo\til\Software Architect\Design Patterns\Factory\Example\FactoryExample\FactoryExample\bin\Debug\netcoreapp3.1\FactoryExample.runtimeconfig.json
+C:\Users\acer\Desktop\Projetos de estudo\til\Software Architect\Design Patterns\Factory\Example\FactoryExample\FactoryExample\bin\Debug\netcoreapp3.1\FactoryExample.runtimeconfig.dev.json
+C:\Users\acer\Desktop\Projetos de estudo\til\Software Architect\Design Patterns\Factory\Example\FactoryExample\FactoryExample\bin\Debug\netcoreapp3.1\FactoryExample.dll
+C:\Users\acer\Desktop\Projetos de estudo\til\Software Architect\Design Patterns\Factory\Example\FactoryExample\FactoryExample\bin\Debug\netcoreapp3.1\FactoryExample.pdb
+C:\Users\acer\Desktop\Projetos de estudo\til\Software Architect\Design Patterns\Factory\Example\FactoryExample\FactoryExample\obj\Debug\netcoreapp3.1\FactoryExample.csprojAssemblyReference.cache
+C:\Users\acer\Desktop\Projetos de estudo\til\Software Architect\Design Patterns\Factory\Example\FactoryExample\FactoryExample\obj\Debug\netcoreapp3.1\FactoryExample.AssemblyInfoInputs.cache
+C:\Users\acer\Desktop\Projetos de estudo\til\Software Architect\Design Patterns\Factory\Example\FactoryExample\FactoryExample\obj\Debug\netcoreapp3.1\FactoryExample.AssemblyInfo.cs
+C:\Users\acer\Desktop\Projetos de estudo\til\Software Architect\Design Patterns\Factory\Example\FactoryExample\FactoryExample\obj\Debug\netcoreapp3.1\FactoryExample.csproj.CoreCompileInputs.cache
+C:\Users\acer\Desktop\Projetos de estudo\til\Software Architect\Design Patterns\Factory\Example\FactoryExample\FactoryExample\obj\Debug\netcoreapp3.1\FactoryExample.dll
+C:\Users\acer\Desktop\Projetos de estudo\til\Software Architect\Design Patterns\Factory\Example\FactoryExample\FactoryExample\obj\Debug\netcoreapp3.1\FactoryExample.pdb
+C:\Users\acer\Desktop\Projetos de estudo\til\Software Architect\Design Patterns\Factory\Example\FactoryExample\FactoryExample\obj\Debug\netcoreapp3.1\FactoryExample.genruntimeconfig.cache
