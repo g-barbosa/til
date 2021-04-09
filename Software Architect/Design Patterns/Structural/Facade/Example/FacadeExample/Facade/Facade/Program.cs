@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Facade.Domain;
+using System;
 
 namespace Facade
 {
@@ -6,7 +7,9 @@ namespace Facade
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var skateshop = new SkateShopService(new SkateShopFacade(new Payment()));
+            Console.WriteLine(skateshop.ComprarSkate("street", 500));
+            Console.WriteLine(skateshop.ComprarSkate("street", 299));
         }
     }
 }
