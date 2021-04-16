@@ -21,7 +21,7 @@ namespace Command
 
         public override void Undo()
         {
-            char state = ' ';
+            char state;
             switch (_act)
             {
                 case 'c': state = 'o'; break;
