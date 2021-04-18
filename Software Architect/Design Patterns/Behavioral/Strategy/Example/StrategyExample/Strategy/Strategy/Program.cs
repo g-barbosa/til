@@ -6,7 +6,11 @@ namespace Strategy
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var streetOrder = new OrderService(SkateShopFactory.DirectToShop(SkateType.Street));
+            Console.WriteLine(streetOrder.ValidatePurchase(300));
+
+            var vertOrder = new OrderService(SkateShopFactory.DirectToShop(SkateType.Vertical));
+            Console.WriteLine(vertOrder.ValidatePurchase(50));
         }
     }
 }
