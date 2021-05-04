@@ -16,5 +16,7 @@ São eles:
 
 **Private Protected**: Somente classes que herdam ou derivam dela dentro do assembly.
 
+**Sealed**: Nenhuma classe pode herdar dela.
+
 
 *: É o arquivo final gerado pelo compilador, um .exe ou dll
