@@ -9,7 +9,10 @@ Temos a classe **Animal** com o método virtual **Som**
 ```c#
 public class Animal
 {
-  public virtual void Som();
+  public virtual void Som() 
+  {
+    Console.WriteLine("...");
+  }
 }
 ```
 
