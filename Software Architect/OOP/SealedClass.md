@@ -21,7 +21,7 @@ Ao tentar fazer como o exemplo abaixo e tentar compilar o código, uma exceção
 ```c#
 class Gatinho : Gato 
 {
-  override public void Som()
+  public override void Som()
   {
     Console.WriteLine("miauzinho!");
   }
