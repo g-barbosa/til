@@ -4,12 +4,77 @@
 
 Dependa de uma abstração e não de uma implementação.
 
-### Exemplo:
+**Por exemplo:**
 
-**Problema:**
+Temos uma classe _**Petshop**_ que recebe no seu construtor um _**PetRepositorioMySQL**_ e possui o método **_CadastrarOuAtualizarPet()_** que verifica se o Pet informado já existe e o atualiza e caso contrário, cria um novo cadastro. 
 
-Temos uma classe **Pet** com o método **adicionarPet** e dentro deste metódo nós criamos uma nova instância de uma classe **PetRepositorio** para poder usar seu método de SalvarPet. O problema é que toda vez que nosso **PetRepositorio** for alterado, precisamos mudar a nossa classe **Pet**. Nossa classe não deveria precisar saber como se instancia este repository ou que tipo de parâmetros ele deveria receber. Devido a isso, estamos quebrando o princípio da inversão de dependência.
+```c#
+    public class Petshop
+    {
+        private readonly PetRepositorioMySQL _petRepositorioMySQL;
+        public Petshop()
+        {
+            _petRepositorioMySQL = new PetRepositorioMySQL();
+        }
+
+        public void _CadastrarOuAtualizarPet(string nome)
+        {
+            var pet = _petRepositorioMySQL.Get(nome);
+
+            if (pet == null)
+                _petRepositorioMySQL.Insert(pet);
+            else
+                _petRepositorioMySQL.Update(pet);
+        }
+    }
+```
+O problema é que se um dia nós resolvêssemos usar uma _**PetRepositorioSQLServer**_ no lugar da _**PetRepositorioMySQL**_, mesmo as duas possuindo os mesmos metódos, precisaríamos mudar a nossa classe **_Petshop_**. Nossa classe não deveria ter que saber como se instancia este repositório ou como que ele se comporta internamente. Só precisamos saber o que ele recebe e o que retorna. 
+Devido a isso, estamos quebrando o princípio da inversão de dependência.
 
 **Solução:**
 
-Criamos a interface **IPetRepositorio** e fazemos com que nossa classe **PetRepositorio** implementa-a. Dentro da classe **Pet**, nós injetamos nossa classe **PetRepositorio** representada pela sua interface **IPetRepositorio**. Assim a **Pet** não é obrigada a saber como criar uma instância de **PetRepositorio** e quem for consumir esta classe deve passar as instâncias já criadas no construtor dela. Desta forma, invertemos o controle.
+Criamos a interface _**IRepositorioGenerico**_ e fazemos com que nossa classe _**PetRepositorioMySQL**_ implementa-a. 
+
+```c#
+    public class PetRepositorioMySQL : IRepositorioGenerico
+    {
+        public Pet Get(string nome)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Insert(Pet pet)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Pet pet)
+        {
+            throw new NotImplementedException();
+        }
+    }
+```
+Dentro da classe _**Petshop**_, nós injetamos nossa classe _**PetRepositorioMySQL**_ representada pela sua interface _**IRepositorioGenerico**_. 
+
+```c#
+    public class Petshop
+    {
+        private readonly IRepositorioGenerico _repositorio;
+        public Petshop(IRepositorioGenerico repositorio)
+        {
+            _repositorio = repositorio;
+        }
+
+        public void _CadastrarOuAtualizarPet(string nome)
+        {
+            var pet = _repositorio.Get(nome);
+
+            if (pet == null)
+                _repositorio.Insert(pet);
+            else
+                _repositorio.Update(pet);
+        }
+    }
+```
+
+Assim a _**Petshop**_ não é obrigada a instanciar o repositório, pois quem consumir esta classe deve passar as instâncias já criadas no construtor dela. E se caso um dia precisemos mudar o repositório, não precisaremos alterar a classe _**PetShop**_, desde que o novo repositório implemente a mesma interface. Desta forma, invertemos o controle.
