@@ -4,13 +4,39 @@
 
 Cada classe deve ter uma única responsabilidade dentro do projeto.
 
-### Exemplo:
+**Por exemplo:**
 
-**Problema:**
+Vamos supor que no nosso projeto exista a seguinte classe:
 
-Temos uma classe **Petshop** e dentro dela temos os métodos **CalcularReceita()** e **CalcularDespesa()** que pegam, respectivamente todos os lucros e despesas que tivemos no mês e retornam a soma desses valores, e **AdicionarPet()** e **BuscarPet()** que, respectivamente registra um novo Pet e procura um Pet especifico no banco e o retorna.
-Não é correto uma classe ser responsável por tantas coisas diferentes... Logo, estamos quebrando o princípio da responsabilidade única.
+```c#
+    public class PetShop
+    {
+        public decimal CalculaReceita(){}
+        public void PagarFuncionarios(){ }
+        public void AdicionarPet(Pet pet) { }
+        public Pet BuscarPet(int id) { }
+    }
+```
+Ela é responsável por uma série de tarefas, como calculo de finanças, pagamento de funcionários e cadastro de Pets... Muita coisa, né!?
+Neste caso, nós teríamos cinco razões completamente diferentes para alterar uma classe, já quebrando o principio da responsabilidade única. Sem falar no alto acoplamento e na dificuldade de manutenção.
 
-**Solução:**
+O ideal seria criar uma classe para cada responsabilidade diferente: 
 
-Criamos a classe **Financas**, que é responsável por cuidar de tudo que seja sobre o assunto financeiro e a classe **Pet** que é responsável apenas pelos pet's
+```c#
+    public class Receita
+    {
+        public decimal CalcularReceita() { }
+    }
+
+    public class Pagamentos
+    {
+        public void PagarFuncionarios() { }
+    }
+
+    public class PetRepositorio
+    {
+        public void AdicionarPet(Pet pet) { }
+        public Pet BuscarPet(int id) { }
+    }
+```
+Muito mais fácil de entender e bonito de se ver, não é mesmo?
